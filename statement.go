@@ -2,12 +2,13 @@ package main
 
 import "fmt"
 
+type Vertex struct {
+	X, Y int
+}
+
 func main()  {
-	fmt.Println("counting")
-
-	for i := 0; i < 10; i++ {
-		defer fmt.Println(i)
-	}
-
-	fmt.Println("done")
+	v := Vertex{1, 2}
+	p := &v
+	p.X = 1e9
+	fmt.Println(v)
 }
